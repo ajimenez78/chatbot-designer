@@ -123,6 +123,11 @@
           <q-tab-panel name="flows">
             <flow-list v-model="chatbotStore.config.flows" @update:modelValue="saveFlows" />
           </q-tab-panel>
+
+          <!-- Flows Edition panel -->
+          <q-tab-panel name="flow_editor">
+            <flow-editor />
+          </q-tab-panel>
         </q-tab-panels>
       </q-card-section>
 
@@ -140,6 +145,7 @@ import { useI18n } from 'vue-i18n'
 import { useQuasar } from 'quasar'
 import { useChatbotStore } from 'src/stores/chatbot-store'
 import FlowList from './FlowList.vue'
+import FlowEditor from './FlowEditor.vue'
 import type { Flow } from 'src/model/types'
 const $q = useQuasar()
 const { t } = useI18n()
@@ -151,6 +157,7 @@ const tabs = [
   { name: 'personality', icon: 'psychology', label: t('tabs.personality') },
   { name: 'knowledge', icon: 'database', label: t('tabs.knowledge') },
   { name: 'flows', icon: 'account_tree', label: t('tabs.flows') },
+  { name: 'flow_editor', icon: 'schema', label: t('tabs.flow_editor') },
 ] as const
 
 // State

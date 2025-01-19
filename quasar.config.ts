@@ -41,6 +41,7 @@ export default defineConfig((ctx) => {
       typescript: {
         strict: true,
         vueShim: true,
+        exactOptionalPropertyTypes: false,
         // extendTsConfig (tsConfig) {}
       },
 

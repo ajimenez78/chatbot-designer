@@ -3,7 +3,13 @@
 
 export default {
   builder: { title: 'Chatbot Builder', subtitle: 'Customize your virtual assistant' },
-  tabs: { basic: 'Basic', personality: 'Personality', knowledge: 'Knowledge', flows: 'Flows' },
+  tabs: {
+    basic: 'Basic',
+    personality: 'Personality',
+    knowledge: 'Knowledge',
+    flows: 'Flows',
+    flow_editor: 'Flow editor',
+  },
   basic: {
     name: 'Chatbot Name',
     nameHint: 'E.g.: Sales Assistant',

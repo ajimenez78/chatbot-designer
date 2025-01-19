@@ -39,14 +39,7 @@
       </q-card-section>
     </q-card>
 
-    <li>
-      <ul v-for="flow in props.modelValue" :key="flow.id">
-        {{
-          flow.trigger
-        }}
-      </ul>
-    </li>
-
+    <!-- Aquí cambiamos <draggable> por <vue-draggable-next> -->
     <vue-draggable-next
       v-model="sortableFlows"
       item-key="id"
@@ -56,7 +49,7 @@
       @end="drag = false"
       class="flows-list"
     >
-      <template #item="{ element, index }">
+      <div v-for="(element, index) in sortableFlows" :key="element.id">
         <q-card class="flow-item q-mb-sm">
           <q-item>
             <q-item-section avatar>
@@ -101,7 +94,7 @@
             </q-item-section>
           </q-item>
         </q-card>
-      </template>
+      </div>
     </vue-draggable-next>
 
     <!-- Dialog para editar flujo -->
@@ -140,12 +133,17 @@
 import { ref, computed } from 'vue'
 import { useI18n } from 'vue-i18n'
 import { useQuasar } from 'quasar'
-import { VueDraggableNext } from 'vue-draggable-next'
+import { VueDraggableNext } from 'vue-draggable-next' // Cambiar la importación
 import { v4 as uuidv4 } from 'uuid'
-import type { Flow } from 'src/model/types'
 
 const $q = useQuasar()
 const { t } = useI18n()
+
+interface Flow {
+  id: string
+  trigger: string
+  response: string
+}
 
 interface Props {
   modelValue: Flow[]

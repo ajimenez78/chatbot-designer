@@ -8,6 +8,7 @@ export default {
     personality: 'Personalidad',
     knowledge: 'Conocimiento',
     flows: 'Flujos',
+    flow_editor: 'Editor de flujos',
   },
   basic: {
     name: 'Nombre del Chatbot',
