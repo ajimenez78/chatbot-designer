@@ -21,6 +21,11 @@ export default {
     response: 'Response',
     responseHint: 'Customized chatbot response',
     addFlow: 'Add Flow',
+    edit: 'Edit flow',
+    delete: 'Delete flow',
+    editFlow: 'Edit flow',
+    deleteConfirm: 'Delete flow',
+    deleteMessage: 'Are you sure you want to delete this flow?',
   },
   actions: { save: 'Save', cancel: 'Cancel' },
   validation: {
@@ -33,6 +38,7 @@ export default {
     flowRemoved: 'Flow removed',
     configSaved: 'Configuration saved successfully',
     error: 'An error occurred',
+    flowUpdated: 'Flow updated successfully',
   },
   dialogs: {
     cancelTitle: 'Cancel Configuration',

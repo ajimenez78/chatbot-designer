@@ -3,13 +3,10 @@ export interface ChatbotConfig {
   personality: string
   greeting: string
   knowledgeBase: string[]
-  flows: ConversationFlow[]
+  flows: Flow[]
 }
-export interface ConversationFlow {
-  trigger: string
-  response: string
-}
-export interface CurrentFlow {
+export interface Flow {
+  id: string
   trigger: string
   response: string
 }

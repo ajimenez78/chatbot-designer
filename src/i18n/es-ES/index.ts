@@ -29,6 +29,11 @@ export default {
     response: 'Respuesta',
     responseHint: 'Respuesta personalizada del chatbot',
     addFlow: 'Agregar Flujo',
+    edit: 'Editar flujo',
+    delete: 'Eliminar flujo',
+    editFlow: 'Editar Flujo',
+    deleteConfirm: 'Eliminar Flujo',
+    deleteMessage: '¿Estás seguro que deseas eliminar este flujo?',
   },
   actions: {
     save: 'Guardar',
@@ -44,6 +49,7 @@ export default {
     flowRemoved: 'Flujo eliminado',
     configSaved: 'Configuración guardada exitosamente',
     error: 'Ha ocurrido un error',
+    flowUpdated: 'Flujo actualizado exitosamente',
   },
   dialogs: {
     cancelTitle: 'Cancelar Configuración',

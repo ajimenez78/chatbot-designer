@@ -1,10 +1,21 @@
 import { defineStore, acceptHMRUpdate } from 'pinia'
+import type { ChatbotConfig } from 'src/model/types'
 
 export const useChatbotStore = defineStore('chatbot', {
+  state: () => ({
+    config: {
+      name: '',
+      personality: '',
+      greeting: '',
+      knowledgeBase: [],
+      flows: [],
+    } as ChatbotConfig,
+  }),
   actions: {
-    async saveConfig(config: unknown) {
+    saveConfig() {
       return new Promise((resolve) => {
-        console.log(`Next to save Config ${String(config)}`)
+        console.log(`Next to save config ${JSON.stringify(this.config)}`)
+        // TODO: save this.config
         resolve('Ok')
       })
     },
